@@ -14,9 +14,8 @@ class AdvertisementViewSet(ModelViewSet):
     #   сериализаторов и фильтров
     queryset = Advertisement.objects.all()
     serializer_class = AdvertisementSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['user']
-    permission_classes = [IsAuthenticated, IsOwnerOrReader]
+    # filter_backends = [DjangoFilterBackend, SearchFilter]
+    # permission_classes = [IsAuthenticated]
 
     def get_permissions(self):
         """Получение прав для действий."""
